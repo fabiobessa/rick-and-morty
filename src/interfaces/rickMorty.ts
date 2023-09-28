@@ -44,7 +44,7 @@ export interface CharacterResponse {
   results: Character[]
 }
 
-export interface QueryParams {
+export interface CharacterQuery {
   name?: string
   status?: CharacterStatus
 }
