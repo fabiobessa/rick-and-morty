@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import Topbar from "@/components/Topbar.vue"
+import Filter from "@/components/Filter.vue"
+import CharactersSection from "@/components/CharactersSection.vue"
 </script>
 
 <template>
-  <div class="container">
-    <header>
-    </header>
+  <header>
+    <Topbar />
+  </header>
 
-    <main>
-    </main>
-  </div>
+  <main>
+    <Filter></Filter>
+    <CharactersSection />
+  </main>
 </template>
