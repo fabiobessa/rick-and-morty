@@ -1,0 +1,13 @@
+:root {
+  --topbar-heigth: 65px;
+}
+
+main {
+  position: relative;
+  top: var(--topbar-heigth);
+}
+
+.fs-7 {
+  font-size: .875rem;
+}
+
