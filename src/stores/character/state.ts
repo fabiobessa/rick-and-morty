@@ -2,7 +2,9 @@ import type { CharacterState } from "./types";
 
 export const characterState: CharacterState = {
   characterList: {
-    searchQuery: {},
+    searchQuery: {
+      status: ''
+    },
     searchState: {
       loading: false,
       success: false,

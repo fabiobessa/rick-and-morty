@@ -1,6 +1,7 @@
 export type CharacterStatus = 'alive'
   | 'dead'
   | 'unknown'
+  | ''
 
 export type CharacterGender = 'female'
   | 'male'
