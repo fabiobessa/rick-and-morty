@@ -48,4 +48,5 @@ export interface CharacterResponse {
 export interface CharacterQuery {
   name?: string
   status?: CharacterStatus
+  page?: number
 }

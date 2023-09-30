@@ -1,5 +1,5 @@
 <template>
-  <section class="container py-3 py-md-5">
+  <section class="container-md py-3 py-md-5">
     <h3>
       Filter
     </h3>
@@ -22,7 +22,7 @@
         </select>
       </div>
       <div class="col-md-2 align-self-end mb-3 mb-md-0">
-        <button class="btn btn-success" @click="loadCharacters">
+        <button class="btn btn-success" @click="handleFilter">
           Filtrar
         </button>
       </div>
@@ -40,4 +40,9 @@ import { storeToRefs } from 'pinia'
     searchQueryCharacter,
     searchStateCharacter
   } = storeToRefs(characterStore)
+
+  function handleFilter() {
+    searchQueryCharacter.value.page = 1
+    loadCharacters()
+  }
 </script>
