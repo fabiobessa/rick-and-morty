@@ -22,6 +22,7 @@ export const useCharacterStore = defineStore({
             errors: ''
           },
           data: [],
+          pagination: null
         }
       })
 
@@ -49,6 +50,7 @@ export const useCharacterStore = defineStore({
               errors: error.response.data.error
             },
             data: [],
+            pagination: null
           }
         })
 
