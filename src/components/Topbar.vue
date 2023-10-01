@@ -11,7 +11,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Personagens</a>
+            <a class="nav-link active" aria-current="page" href="#">Characters</a>
           </li>
         </ul>
       </div>

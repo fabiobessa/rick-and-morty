@@ -8,13 +8,25 @@
         <label for="characterName" class="form-label">
           Name
         </label>
-        <input type="text" id="characterName" class="form-control" v-model="searchQueryCharacter.name" placeholder="Filter by name">
+        <input
+          type="text"
+          id="characterName"
+          class="form-control"
+          v-model="searchQueryCharacter.name"
+          placeholder="Filter by name"
+          :disabled="searchStateCharacter.loading"
+        >
       </div>
       <div class="col-md-5 mb-3 mb-md-0">
         <label for="characterStatus" class="form-label">
           Status
         </label>
-        <select id="characterStatus" class="form-select" v-model="searchQueryCharacter.status">
+        <select
+          id="characterStatus"
+          class="form-select"
+          v-model="searchQueryCharacter.status"
+          :disabled="searchStateCharacter.loading"
+        >
           <option value="">Select a status</option>
           <option value="alive">Alive</option>
           <option value="dead">Dead</option>
@@ -22,8 +34,12 @@
         </select>
       </div>
       <div class="col-md-2 align-self-end mb-3 mb-md-0">
-        <button class="btn btn-success" @click="handleFilter">
-          Filtrar
+        <button
+          class="btn btn-success"
+          @click="handleFilter"
+          :disabled="searchStateCharacter.loading"
+        >
+          Filter
         </button>
       </div>
     </div>
