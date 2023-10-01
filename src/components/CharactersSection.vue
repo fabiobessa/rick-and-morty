@@ -1,40 +1,28 @@
 <template>
-  <section class="container-md py-md-5">
-    <div class="row">
-      <div class="col-md-12 col-xl-6 d-xl-block d-flex justify-content-center my-2" v-for="character in characterListData" :key="character.id" >
-        <CharacterCard :character="character"/>
-      </div>
+  <CharactersFilter />
+  <div v-if="searchStateCharacter.loading" class="d-flex justify-content-center py-5">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
-    <Pagination
-      v-if="paginationCharacter && paginationCharacter.pages > 1"
-      :pagination="paginationCharacter"
-      @to-page="handlePagination"
-    />
-  </section>
+  </div>
+  <CharactersList v-else />
 </template>
 
 <script setup lang="ts">
-  import CharacterCard from '@/components/CharacterCard.vue'
-  import Pagination from '@/components/Pagination.vue'
-  import { onMounted } from "vue"
+  import CharactersList from '@/components/CharactersList.vue'
+  import CharactersFilter from '@/components/CharactersFilter.vue'
   import { useCharacterStore } from '@/stores/character'
-  import { storeToRefs } from "pinia";
+  import { storeToRefs } from 'pinia'
+  import { onMounted } from 'vue';
 
   const characterStore = useCharacterStore()
   const { loadCharacters } = characterStore
   const {
-    searchStateCharacter,
-    searchQueryCharacter,
-    characterListData,
-    paginationCharacter
+    searchStateCharacter
   } = storeToRefs(characterStore)
+
 
   onMounted(async () => {
     await loadCharacters()
   })
-
-  function handlePagination(page: number) {
-    searchQueryCharacter.value.page = page
-    loadCharacters()
-  }
 </script>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Topbar from "@/components/Topbar.vue"
-import Filter from "@/components/Filter.vue"
 import CharactersSection from "@/components/CharactersSection.vue"
 </script>
 
@@ -10,7 +9,6 @@ import CharactersSection from "@/components/CharactersSection.vue"
   </header>
 
   <main>
-    <Filter></Filter>
     <CharactersSection />
   </main>
 </template>
