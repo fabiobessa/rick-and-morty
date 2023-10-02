@@ -26,6 +26,7 @@
           class="form-select"
           v-model="searchQueryCharacter.status"
           :disabled="searchStateCharacter.loading"
+          data-cy="status-select"
         >
           <option value="">Select a status</option>
           <option value="alive">Alive</option>
