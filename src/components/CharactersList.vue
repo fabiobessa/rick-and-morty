@@ -1,13 +1,26 @@
 <template>
-  <section class="container-md py-5 d-flex justify-content-center" v-if="searchStateCharacter.error">
+  <section
+    v-if="searchStateCharacter.error"
+    class="container-md py-5 d-flex justify-content-center"
+  >
     <h4 class="text-danger">
       {{ searchStateCharacter.errors }}
     </h4>
   </section>
   <section v-else class="container-md py-5">
     <div class="row">
-      <div class="col-md-12 col-xl-6 d-xl-block d-flex justify-content-center my-2" v-for="character in characterListData" :key="character.id" >
-        <CharacterListItem :character="character" type="button" data-bs-toggle="modal" data-bs-target="#characterModal" @click="handleModal(character)"/>
+      <div
+        v-for="character in characterListData"
+        :key="character.id"
+        class="col-md-12 col-xl-6 d-xl-block d-flex justify-content-center my-2"
+      >
+        <CharacterListItem
+          :character="character"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#characterModal"
+          @click="handleModal(character)"
+        />
       </div>
     </div>
     <Pagination
@@ -32,13 +45,18 @@
   const { loadCharacters } = characterStore
   const {
     searchStateCharacter,
-    searchQueryCharacter,
     characterListData,
     paginationCharacter
   } = storeToRefs(characterStore)
 
   function handlePagination(page: number) {
-    searchQueryCharacter.value.page = page
+    characterStore.$patch({
+      characterList: {
+        searchQuery: {
+          page: page
+        }
+      }
+    })
     loadCharacters()
   }
 

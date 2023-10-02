@@ -58,7 +58,14 @@ import { storeToRefs } from 'pinia'
   } = storeToRefs(characterStore)
 
   function handleFilter() {
-    searchQueryCharacter.value.page = 1
+    characterStore.$patch({
+      characterList: {
+        searchQuery: {
+          page: 1
+        }
+      }
+    })
+
     loadCharacters()
   }
 </script>

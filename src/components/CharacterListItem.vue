@@ -35,17 +35,15 @@
 </script>
 
 <style scoped>
-.character-image {
-  width: 180px;
+  .character-image {
+    width: 180px;
 
-  @media (max-width: 768px) {
-    width: 100%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
-}
 
-.bg-gray {
-  background-color: rgb(240, 240, 240);
-}
-
-
+  .bg-gray {
+    background-color: rgb(240, 240, 240);
+  }
 </style>

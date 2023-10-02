@@ -4,11 +4,7 @@ import CharactersSection from "@/components/CharactersSection.vue"
 </script>
 
 <template>
-  <header>
-    <Topbar />
-  </header>
+  <Topbar />
 
-  <main>
-    <CharactersSection />
-  </main>
+  <CharactersSection />
 </template>

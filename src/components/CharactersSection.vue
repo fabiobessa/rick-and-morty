@@ -1,11 +1,13 @@
 <template>
-  <CharactersFilter />
-  <div v-if="searchStateCharacter.loading" class="d-flex justify-content-center py-5">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
+  <main>
+    <CharactersFilter />
+    <div v-if="searchStateCharacter.loading" class="d-flex justify-content-center py-5">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
-  </div>
-  <CharactersList v-else />
+    <CharactersList v-else />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -17,10 +19,7 @@
 
   const characterStore = useCharacterStore()
   const { loadCharacters } = characterStore
-  const {
-    searchStateCharacter
-  } = storeToRefs(characterStore)
-
+  const { searchStateCharacter } = storeToRefs(characterStore)
 
   onMounted(async () => {
     await loadCharacters()

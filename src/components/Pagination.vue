@@ -7,6 +7,7 @@
           :key="page"
           class="page-item"
           :class="{ 'active': currentPage === page }"
+          :data-cy="`page-item-${page}`"
         >
           <button
             class="page-link"
@@ -128,7 +129,6 @@ import { computed } from 'vue';
   })
 
   const isFirst = computed(() => !props.pagination.prev)
-
 
   const hasSpan = computed(() => props.pagination.pages > 10)
 </script>
