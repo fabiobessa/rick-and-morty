@@ -24,10 +24,11 @@
         <li
           v-if="!isFirst && currentPage > 5"
           class="page-item"
-        >
+          >
           <button
             class="page-link"
             @click="$emit('toPage', 1)"
+            data-cy="page-item-first"
           >
             First
           </button>
@@ -52,6 +53,7 @@
         >
           <button
             class="page-link"
+            data-cy="page-item-span"
           >
             ...
           </button>
