@@ -33,9 +33,9 @@
 </template>
 
 <script setup lang="ts">
-  import CharacterListItem from '@/components/CharacterListItem.vue'
-  import Pagination from '@/components/Pagination.vue'
-  import CharacterDetailModal from '@/components/CharacterDetailModal.vue'
+  import CharacterListItem from '@/components/CharacterListItem/index.vue'
+  import Pagination from '@/components/Pagination/index.vue'
+  import CharacterDetailModal from '@/components/CharacterDetailModal/index.vue'
   import { ref } from "vue"
   import { useCharacterStore } from '@/stores/character'
   import { storeToRefs } from "pinia"

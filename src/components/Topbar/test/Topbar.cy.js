@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import Topbar from './Topbar.vue'
+import Topbar from '@/components/Topbar/index.vue'
 
 describe('<Topbar />', () => {
   it('renders', () => {

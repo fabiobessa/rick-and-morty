@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import CharactersFilter from './CharactersFilter.vue'
+import CharactersFilter from '@/components/CharactersFilter/index.vue'
 
 describe('select should have options', () => {
   it('renders', () => {

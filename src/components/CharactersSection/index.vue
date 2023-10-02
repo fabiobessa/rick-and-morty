@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-  import CharactersList from '@/components/CharactersList.vue'
-  import CharactersFilter from '@/components/CharactersFilter.vue'
+  import CharactersList from '@/components/CharactersList/index.vue'
+  import CharactersFilter from '@/components/CharactersFilter/index.vue'
   import { useCharacterStore } from '@/stores/character'
   import { storeToRefs } from 'pinia'
   import { onMounted } from 'vue';

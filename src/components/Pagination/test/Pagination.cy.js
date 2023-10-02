@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import Pagination from './Pagination.vue'
+import Pagination from '@/components/Pagination/index.vue'
 
 describe('<Pagination />', () => {
   it('renders with default page 1', () => {
