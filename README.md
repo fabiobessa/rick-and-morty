@@ -1,5 +1,6 @@
 # Rick and morty - Listagem de personagens
-![image](https://github.com/fabiobessa/rick-and-morty/assets/91769397/ce93172a-b44f-49b4-ae56-cb81103c6b9f)
+![image](https://github.com/fabiobessa/rick-and-morty/assets/91769397/d7c6af99-0b9d-4466-9339-b7295b0dfe89)
+
 
 O projeto visa listar os personagens da série Rick and Morty, permitindo a pesquisa por nome dos personagens e/ou filtro por status (vivo, morto ou desconhecido).
 Pelo fato da API retornar tudo em inglês a página e o código estão também em inglês.
