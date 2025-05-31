@@ -34,13 +34,19 @@
           <option value="unknown">Unknown</option>
         </select>
       </div>
-      <div class="col-md-2 align-self-end mb-3 mb-md-0">
+      <div class="col-md-2 align-self-end mb-3 mb-md-0 d-flex gap-2">
         <button
           class="btn btn-success"
           @click="handleFilter"
           :disabled="searchStateCharacter.loading"
         >
           Filter
+        </button>
+        <button
+          class="btn btn-outline-secondary"
+          @click="handleClearFilter"
+        >
+          Clear
         </button>
       </div>
     </div>
@@ -63,6 +69,21 @@ import { storeToRefs } from 'pinia'
       characterList: {
         searchQuery: {
           page: 1
+        }
+      }
+    })
+
+    loadCharacters()
+  }
+
+  function handleClearFilter() {
+    searchQueryCharacter.value.name = ''
+    searchQueryCharacter.value.status = ''
+
+    characterStore.$patch({
+      characterList: {
+        searchQuery: {
+          page: 1,
         }
       }
     })
